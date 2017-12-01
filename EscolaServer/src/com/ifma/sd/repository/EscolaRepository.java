@@ -59,7 +59,7 @@ public class EscolaRepository {
 			prd.setString(1,  turma);
 			result = prd.executeQuery();
 			
-			if(result.next()) {
+			while(result.next()) {
 				aluno = new Aluno();
 				aluno.setMatricula(result.getInt("matricula"));
 				aluno.setNome(result.getString("nome"));
